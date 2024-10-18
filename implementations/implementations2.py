@@ -43,7 +43,7 @@ class SimplexHeap:
         """
         Sélectionne la colonne pivot en utilisant un tas (heap) pour accélérer l'opération.
         """
-        heapq.heapify(self.tableau[-1, :-1])  # On crée un tas à partir de la dernière ligne
+        heapq.heapify(self.tableau[-1, :-1].tolist())  # Convertir en liste avant d'utiliser heapify # On crée un tas à partir de la dernière ligne
         pivot_col = np.argmin(self.tableau[-1, :-1])
         return pivot_col
 
